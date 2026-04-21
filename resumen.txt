@@ -1,0 +1,132 @@
+Aquí tienes la adaptación completa de tu proyecto al nuevo formato de plantilla, aplicando el cambio de nombre a SENTINEL en todas las secciones y respetando la estructura exacta que solicitaste.
+NOMBRE DEL PROYECTO SENTINEL - Sistema Inteligente de Gestion Empresarial con Arquitectura de Microservicios para la Deteccion de Fraude Tributario y Prediccion de Demanda basado en Comprobantes de Pago Electronicos.
+
+PLANTEAMIENTO DEL PROBLEMA Las micro y pequeñas empresas (MYPES) peruanas representan más del 96% del tejido empresarial nacional. Sin embargo, operan sus procesos financieros de forma fragmentada: emiten comprobantes electrónicos obligatorios a la SUNAT, pero los datos (XMLs) jamás son aprovechados como fuente de inteligencia de negocio.
+
+El problema se manifiesta en tres dimensiones críticas:
+
+Riesgo tributario no detectado: Exposición a multas por no verificar automáticamente si un proveedor está clasificado como Sujeto Sin Capacidad Operativa (SSCO) por la SUNAT.
+
+
+Quiebre de stock y sobreinventario: Incapacidad de predecir la demanda de los próximos ciclos, inmovilizando capital o perdiendo ventas.
+
+
+Abandono silencioso de clientes B2B: Pérdida de ingresos recurrentes al no detectar a tiempo cuando un cliente habitual deja de comprar.
+
+
+EVIDENCIA DEL PROBLEMA
+Se observa que en el contexto MYPE comercial peruano:
+Solo el 28.4% de MYPES usa algún software de gestión.
+
+
+Más del 15% de MYPES han recibido observaciones por gastos con proveedores de riesgo, con más de 3,200 empresas SSCO activas reportadas por SUNAT.
+
+
+Entre el 4% y el 8% de ventas potenciales se pierden por quiebres de stock.
+
+
+El 40% de clientes B2B que dejan de comprar no comunican su decisión y solo son detectados cuando el ciclo ya cesó.
+
+
+USUARIOS INVOLUCRADOS
+Gerente / Dueño MYPE: Visualiza el dashboard de inteligencia con alertas de fraude y predicciones para tomar decisiones críticas.
+
+
+Contador / Administrador: Emite comprobantes, valida proveedores en tiempo real y gestiona el cumplimiento tributario.
+
+
+Equipo de Ventas / Compras: Recibe alertas de retención B2B y sugerencias de órdenes de compra automatizadas.
+
+
+SUNAT (Entidad regulatoria): Recibe los comprobantes y expone la API para validación SSCO.
+
+
+5. Propuesta de solución Se propone desarrollar SENTINEL, un sistema web inteligente (SaaS) que convierte el flujo de comprobantes electrónicos en el núcleo de un motor de inteligencia artificial.
+
+El sistema permitirá:
+Integrar la facturación electrónica SUNAT en una plataforma unificada.
+
+
+Detectar fraude tributario mediante verificación SSCO en tiempo real.
+
+
+Predecir la demanda por SKU/categoría en un horizonte de 30 días.
+
+
+Calcular un scoring diario de retención para identificar clientes B2B con riesgo de abandono.
+
+
+Brindar soporte a la decisión mediante alertas explicables (usando valores SHAP).
+
+
+6. Alcance de la solución
+✓ Incluye:
+Emisión y recepción de facturas electrónicas (XML UBL 2.1) con envío a SUNAT.
+
+
+Verificación en tiempo real del RUC contra la base SSCO de SUNAT y análisis de coherencia de gasto con OCR.
+
+
+Predicción de demanda y generación automática de sugerencias de compra.
+
+
+Scoring de clientes B2B y recomendaciones de cross-selling.
+
+
+Dashboard interactivo con KPIs financieros y cumplimiento estricto de la Ley 29733 (cifrado y log inmutable).
+
+
+✘ No incluye:
+Módulo de contabilidad completa (balance general, libro diario).
+
+
+Gestión de planillas, RRHH o control de asistencia.
+
+
+Aplicación móvil nativa iOS/Android.
+
+
+Emisión de comprobantes para regímenes especiales (bancos, seguros, etc.).
+
+
+7. Valor de la solución
+La solución permitirá a las MYPES:
+Reducir contingencias tributarias y multas al detectar tempranamente proveedores de riesgo.
+
+
+Optimizar el inventario y reducir pérdidas por quiebre de stock.
+
+
+Incrementar la tasa de retención comercial reteniendo a clientes en riesgo.
+
+
+Convertir una obligación regulatoria en inteligencia de negocio automatizada, superando en un 30% la precisión de sistemas basados en reglas estáticas.
+
+
+8. Trazabilidad por competencias
+Línea
+Competencia
+Cómo lo cumple el proyecto
+Gestión TI (CE01)
+Gestiona proyectos de tecnologías de información
+Implementa roles estrictos (RBAC), auditoría inmutable y cumplimiento legal de la Ley 29733 y normativa SUNAT.
+
+
+Ingeniería de Software (CE02)
+Desarrolla soluciones de software
+Construye una App Web responsiva y API REST utilizando Angular 19+ y Spring Boot 3 bajo una arquitectura desacoplada.
+
+
+Infraestructura Tecnológica (CE03)
+Gestiona infraestructura tecnológica
+Contenedoriza microservicios con Docker y orquesta la base de datos transaccional PostgreSQL con la extensión TimescaleDB.
+
+
+Ciencia de Datos / IA (CE04)
+Aplica técnicas de datos o IA
+Desarrolla un pipeline ETL y tres motores de Machine Learning (LightGBM) con explicabilidad SHAP, NLP y OCR para procesar XMLs y recibos.
+
+
+
+Conclusión La solución propuesta permite transformar el proceso obligatorio de facturación electrónica en un sistema inteligente, predictivo y escalable. En esta primera fase piloto, el enfoque se centra en procesar el historial XML para validar el funcionamiento del sistema en una MYPE real. De esta manera, se logra que cada comprobante de pago reduzca el riesgo fiscal, optimice el abastecimiento, brinde soporte comercial preventivo y mejore la toma de decisiones empresariales basadas en datos concretos.
+
